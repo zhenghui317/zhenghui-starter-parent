@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.phenix</groupId>
+    <artifactId>phenix-spring-boot-starter-mysql</artifactId>
+    <version>${phenix-spring-boot-starter-mysql.version}</version>
+    <packaging>jar</packaging>
+
+    <name>phenix-spring-boot-starter-mysql</name>
+    <description>mysql starter</description>
+
+    <parent>
+        <groupId>com.phenix</groupId>
+        <artifactId>phenix-spring-boot-starter-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+	
+    <properties>
+        <!-- mybatisplus -->
+        <mybatisplus-spring-boot-starter.version>3.2.0</mybatisplus-spring-boot-starter.version>
+        <mybatisplus-generator.version>3.2.0</mybatisplus-generator.version>
+        <!--database-->
+        <mysql.connector.version>8.0.18</mysql.connector.version>
+        <jdbc-spring-boot-starter.version>2.2.0.RELEASE</jdbc-spring-boot-starter.version>
+        <mybatis.version>1.3.2</mybatis.version>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.connector.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <version>${jdbc-spring-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+    </dependencies>
+
+</project>

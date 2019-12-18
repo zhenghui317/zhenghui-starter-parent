@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.phenix.starter.mybatisplus.autoconfigure.MybatisPlusObjectHandler,\
+com.phenix.starter.mybatisplus.tenant.TenantInterceptor,\
+com.phenix.starter.mybatisplus.tenant.TenantMvcConfig

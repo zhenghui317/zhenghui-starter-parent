@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.phenix</groupId>
+	<artifactId>phenix-spring-boot-starter-parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>phenix-spring-boot-starter-parent</name>
+	<description>定制加启动包</description>
+	<packaging>pom</packaging>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<spring.boot.version>2.1.9.RELEASE</spring.boot.version>
+		<spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+		<spring-cloud-stream.version>Germantown.RELEASE</spring-cloud-stream.version>
+		<spring-cloud-alibaba.version>0.9.0.RELEASE</spring-cloud-alibaba.version>
+
+		<lombok.version>1.18.10</lombok.version>
+		<commons-lang.version>3.9</commons-lang.version>
+		<fastjson.version>1.2.62</fastjson.version>
+		<starter.version>2.2.1.RELEASE</starter.version>
+		<!-- aop -->
+		<spring-boot-starter-aop.version>2.0.1.RELEASE</spring-boot-starter-aop.version>
+		<javax.el.version>3.0.1-b08</javax.el.version>
+
+		<hutool-all.version>5.0.3</hutool-all.version>
+		<!--starter版本 -->
+		<phenix-spring-boot-starter-parent.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-parent.version>
+		<phenix-spring-boot-starter-admin.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-admin.version>
+		<phenix-spring-boot-starter-feign.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-feign.version>
+		<phenix-spring-boot-starter-logging.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-logging.version>
+		<phenix-spring-boot-starter-mybatis-plus.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-mybatis-plus.version>
+		<phenix-spring-boot-starter-mysql.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-mysql.version>
+		<phenix-spring-boot-starter-nacos.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-nacos.version>
+		<phenix-spring-boot-starter-rabbitmq.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-rabbitmq.version>
+		<phenix-spring-boot-starter-redis.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-redis.version>
+		<phenix-spring-boot-starter-swagger.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-swagger.version>
+		<phenix-spring-boot-starter-web.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-web.version>
+		<phenix-spring-boot-starter-security.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-security.version>
+	</properties>
+
+	<dependencies>
+		<!-- spring-boot-starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<!-- commons-tool  -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang.version}</version>
+		</dependency>
+		<!-- test  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- 健康检查  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- configuration-processor  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+			<version>${lombok.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>${hutool-all.version}</version>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- lombok -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<scope>provided</scope>
+				<version>${lombok.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>cn.hutool</groupId>
+				<artifactId>hutool-all</artifactId>
+				<version>${hutool-all.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-web</artifactId>
+				<version>${phenix-spring-boot-starter-web.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-logging</artifactId>
+				<version>${phenix-spring-boot-starter-logging.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-swagger</artifactId>
+				<version>${phenix-spring-boot-starter-swagger.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-nacos</artifactId>
+				<version>${phenix-spring-boot-starter-nacos.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-mysql</artifactId>
+				<version>${phenix-spring-boot-starter-mysql.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-mybatis-plus</artifactId>
+				<version>${phenix-spring-boot-starter-mybatis-plus.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-admin</artifactId>
+				<version>${phenix-spring-boot-starter-admin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-redis</artifactId>
+				<version>${phenix-spring-boot-starter-redis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-rabbitmq</artifactId>
+				<version>${phenix-spring-boot-starter-rabbitmq.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-feign</artifactId>
+				<version>${phenix-spring-boot-starter-feign.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.phenix</groupId>
+				<artifactId>phenix-spring-boot-starter-security</artifactId>
+				<version>${phenix-spring-boot-starter-security.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<pluginManagement>
+			<plugins>
+				<!-- 发布插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<configuration>
+						<!--<preparationGoals>clean package</preparationGoals>-->
+						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<!-- 不使用默认的profile -->
+						<tagNameFormat>v@{project.version}</tagNameFormat>
+						<useReleaseProfile>false</useReleaseProfile>
+						<!--  在发布时不检查是否提交 git 的文件过滤配置 -->
+						<allowReleasePluginSnapshot>true</allowReleasePluginSnapshot>
+						<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+						<checkModificationExcludes>
+							<checkModificationExclude>.project</checkModificationExclude>
+							<checkModificationExclude>.settings</checkModificationExclude>
+							<checkModificationExclude>.classpath</checkModificationExclude>
+							<checkModificationExclude>**\.project</checkModificationExclude>
+							<checkModificationExclude>**\.settings</checkModificationExclude>
+							<checkModificationExclude>**\.classpath</checkModificationExclude>
+						</checkModificationExcludes>
+						<!--<commitByProject>true</commitByProject>-->
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>org.apache.maven.scm</groupId>
+							<artifactId>maven-scm-provider-gitexe</artifactId>
+							<version>1.9.4</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+				<!-- 生成sources源码包的插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<executions>
+						<execution>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<!-- maven-enforcer-plugin 这个插件会对项目环境进行检查 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>phoenix-releases</id>
+			<url>https://repo.rdc.aliyun.com/repository/114773-release-m6CZw0/</url>
+		</repository>
+		<snapshotRepository>
+			<id>phoenix-snapshots</id>
+			<url>https://repo.rdc.aliyun.com/repository/114773-snapshot-Hz4DGO/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<modules>
+		<module>phenix-spring-boot-starter-web</module>
+		<module>phenix-spring-boot-starter-logging</module>
+		<module>phenix-spring-boot-starter-swagger</module>
+		<module>phenix-spring-boot-starter-mysql</module>
+		<module>phenix-spring-boot-starter-redis</module>
+		<module>phenix-spring-boot-starter-nacos</module>
+		<module>phenix-spring-boot-starter-admin</module>
+        <module>phenix-spring-boot-starter-rabbitmq</module>
+		<module>phenix-spring-boot-starter-mybatis-plus</module>
+		<module>phenix-spring-boot-starter-feign</module>
+		<module>phenix-spring-boot-starter-security</module>
+		<module>phenix-spring-boot-starter-all</module>
+	</modules>
+</project>

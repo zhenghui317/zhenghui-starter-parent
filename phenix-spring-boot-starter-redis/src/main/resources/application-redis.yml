@@ -1,0 +1,13 @@
+redis:
+  enabled: true
+spring:
+  redis:
+    database: ${redis.database:0}
+    host: ${redis.host:localhost}
+    port: ${redis.port:6379}
+    password: ${redis.password:}
+    cluster:
+      nodes: ${redis.cluster.nodes:}
+    pool:
+      # 连接超时时间（毫秒）
+      timeout: ${redis.pool.timeout:0}

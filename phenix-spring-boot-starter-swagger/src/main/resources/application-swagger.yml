@@ -1,0 +1,8 @@
+#api doc
+swagger:
+  enabled: ${swagger:true}
+  title: ${spring.application.name:Project Name}
+  description:
+  web-base-package: com.phenix.*
+  redirect: false
+

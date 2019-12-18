@@ -1,0 +1,8 @@
+mybatis-plus:
+  enabled: true
+  generic:
+    enabled: true
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  global-config:
+    db-column-underline: true
+    refresh-mapper: true
