@@ -28,7 +28,7 @@
 		<spring-boot-starter-aop.version>2.0.1.RELEASE</spring-boot-starter-aop.version>
 		<javax.el.version>3.0.1-b08</javax.el.version>
 
-		<hutool-all.version>5.0.3</hutool-all.version>
+		<hutool-all.version>5.8.21</hutool-all.version>
 		<!--starter版本 -->
 		<phenix-spring-boot-starter-parent.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-parent.version>
 		<phenix-spring-boot-starter-admin.version>1.0.0-SNAPSHOT</phenix-spring-boot-starter-admin.version>
